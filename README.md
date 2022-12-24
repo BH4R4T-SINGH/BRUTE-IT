@@ -16,3 +16,6 @@ Installation of python modules: `pip3 install -r requirements.txt`
 **-s > To check for specific status code**
 
 **--show-status > To show the status code of the Url**
+
+### Example
+https://user-images.githubusercontent.com/72012020/209430787-dbebedba-a60e-4995-8307-eaac4a4f4cca.mp4
