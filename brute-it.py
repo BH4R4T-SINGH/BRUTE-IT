@@ -29,6 +29,17 @@ parser.add_argument('-s', '--status_code', type=int, help='The expected status c
 parser.add_argument('--show-status', action='store_true', help='Show the status code of the output')
 args = parser.parse_args()
 
+# Set the default wordlist file path
+DEFAULT_WORDLIST = 'wordlist.txt'
+
+# Check if a custom wordlist was provided, otherwise use the default wordlist
+wordlist_path = args.wordlist if args.wordlist else DEFAULT_WORDLIST
+
+# Check if the wordlist file exists
+if not os.path.exists(wordlist_path):
+    print(f'[!] Wordlist file "{wordlist_path}" not found.')
+    exit()
+
 # Request Headers
 headers = {
   'User-Agent': 'Kali Linux'
